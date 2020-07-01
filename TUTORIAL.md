@@ -45,6 +45,8 @@ The code `print("Hello world")` calls the `print()` function and prints the text
 
 Most of the time you will be typing into the `blackjack.py` file window. When you want to run your program you will have to type into the terminal window. To run your code so far, enter `python blackjack.py` into the terminal and press enter.
 
+For terminal tests to work, you will have to run the following line once before any other commands: `source ~/.bashrc`
+
 #### HINTS
 
 - Make sure you're in the `project` folder. 
