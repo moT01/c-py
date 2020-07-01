@@ -1,0 +1,42 @@
+version: '0.1.0'
+config:
+  testRunner:
+    command: python3 -m tap tests/*_test.py
+    args:
+      tap: ''
+    setup:
+      commands:
+        # install tap
+        - pip3 install tap.py==3.0
+        # set up bashrc to log commands entered
+        - cd .. && sed -i "s/HISTCONTROL=ignoreboth/#/" .bashrc && echo placeholder >> .bashrc && sed -i "s/placeholder/PROMPT_COMMAND='echo "\$PWD" >> ~\/project\/tests\/\.cwd; history -a'/" .bashrc
+        # restart with new bashrc settings
+        - source ~/.bashrc
+  repo: 
+    uri: https://github.com/beaucarnes/c-py
+    branch: v0.1.0
+levels:
+  - id: '10'
+    steps:
+      - id: '10.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '20'
+    steps:
+      - id: '20.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '30'
+    steps:
+      - id: '30.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '40'
+    steps:
+      - id: '40.1'
+        setup:
+          watchers:
+            - ../.bash_history
