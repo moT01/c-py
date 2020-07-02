@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "summary": {
-    "title": "Learn Python Basics by Building a Blackjack Game",
+    "title": "Blackjack Game",
     "description": "You are going to build a blackjack card game in Python.\n\nEvery card in blackjack has a suit, rank, and value. For example, the king of hearts has a rank of \"king\", a suit of \"hearts\", and a value of 10 (In blackjack, face cards are worth 10)."
   },
   "config": {
