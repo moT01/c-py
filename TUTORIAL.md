@@ -1,4 +1,4 @@
-# Learn Python Basics by Building a Blackjack Game
+# Blackjack Game
 
 You are going to build a blackjack card game in Python.
 
